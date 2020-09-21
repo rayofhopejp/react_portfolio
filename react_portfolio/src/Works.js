@@ -32,14 +32,14 @@ class WorksContents extends React.Component {
                 link:"https://www.vector.co.jp/soft/winnt/amuse/se515415.html"
               },
               {
-                name:"Wish on Beasts(2015)",
-                discription:"中学3年生の時に作ったアクションゲームです．言語はC++，WINAPIを用いて作りました．",
-                link:"https://www.vector.co.jp/soft/winnt/game/se508162.html"
-              },
-              {
                 name:"狼の舞(2016)",
                 discription:"高校1年生の時に作ったボードゲームです．言語はC++，DxLibを用いて作りました．",
                 link:"https://www.vector.co.jp/soft/winnt/game/se511665.html"
+              },
+              {
+                name:"Wish on Beasts(2015)",
+                discription:"中学3年生の時に作ったアクションゲームです．言語はC++，WINAPIを用いて作りました．",
+                link:"https://www.vector.co.jp/soft/winnt/game/se508162.html"
               },
           ]
       }
