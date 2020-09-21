@@ -24,10 +24,11 @@ class ExperiencesContents extends React.Component {
           {
             name:"東京大学Summer Founders Program 2019",
             discription:"視線方向の音を増幅する補聴器の開発に取り組みました，言語はJavascriptとPureDataを用いました．",
+            icon:"https://www.u-tokyo.ac.jp/content/400097923.jpg",
           },
           {
             name:"日本情報オリンピック(2015,2017)",
-            discription:"予選をAランクで突破し，本戦に参加しています．2015年には理事長賞をいただきました(女子で一位だったため)．",
+            discription:"予選をAランクで突破し，本戦に参加しています．2015年には理事長賞をいただきました．",
             link:"https://www.ioi-jp.org/joi/2014/2015-ho-invited-list.html",
           },
           {
@@ -37,7 +38,7 @@ class ExperiencesContents extends React.Component {
           },
           {
             name:"日本情報オリンピック夏季セミナー(2014,2016)",
-            discription:"夏季セミナーに参加し，本を読んでその内容について発表しました．リンクは2014年のスライドです．",
+            discription:"夏季セミナーに参加し，本を読んでその内容について実装などを行い，発表しました．リンクは2014年のスライドです．",
             link:"https://www.slideshare.net/sakura-mike/ss-38485234",
           },
         ]

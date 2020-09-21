@@ -22,8 +22,10 @@ function ProductRow(props){
         <a href={props.product.link} rel="noopener noreferrer" target="_blank">
           <li className="ProductRow clearfix">
               {image}
+              <div className="ProductDiscription">
               <h3>{props.product.name}</h3>
               {props.product.discription}
+              </div>
           </li>
         </a>
     );

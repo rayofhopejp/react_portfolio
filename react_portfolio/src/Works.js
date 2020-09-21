@@ -10,7 +10,8 @@ class WorksContents extends React.Component {
             　{
                 name:"A Survey on Natural Language Processing for Fake News Detection(2018)",
                 discription:"大学1年生夏のインターンシップで執筆したsurveyです．LREC2020に採択されました．",
-                link:"https://arxiv.org/abs/1811.00770"
+                link:"https://arxiv.org/abs/1811.00770",
+                icon:"https://lrec2020.lrec-conf.org/media/filer_public/2013/05/30/elra.gif"
               },
               {
                 name:"LiHabit(2020)",
@@ -27,6 +28,12 @@ class WorksContents extends React.Component {
                 discription:"このサイトです．Reactの練習に作りました．",
                 link:"https://naomiatlibrary.com",
                 icon:NaomiIcon
+              },
+              {
+                name:"リローシャチャンネル(2018-2019)",
+                discription:"大学の語学クラスで協力してチャンネルを運営しました．",
+                link:"https://www.youtube.com/channel/UC5T-TP6eOGbX9DVXpLtevEA",
+                icon:"https://yt3.ggpht.com/a/AATXAJwolPLk2AMYXnWhqXLyQXNWJ0kwXwtT-yzaTfH0=s288-c-k-c0xffffffff-no-rj-mo"
               },
               {
                 name:"文豪チャット(2017)",
