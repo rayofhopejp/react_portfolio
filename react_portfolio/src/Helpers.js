@@ -2,9 +2,6 @@ import React from 'react';
 import './App.css';
 
 class SearchBar extends React.Component {
-    constructor(props) {
-      super(props);
-    }
     render() {
       return (
         <form onSubmit={this.props.onSubmit}>
@@ -12,7 +9,7 @@ class SearchBar extends React.Component {
             KeyWord:
             <input value={this.props.value}
                    type="text" 
-                   placeholder="Ruby..."
+                   placeholder="Ruby Lihabit..."
                    onChange={this.props.onChange}/> 
           </label>
         </form>
@@ -21,23 +18,21 @@ class SearchBar extends React.Component {
 }
 function ProductRow(props){
     return(
-        <a href={props.product.link}>
+        <a href={props.product.link} rel="noopener noreferrer" target="_blank">
           <li className="ProductRow">
-              {props.product.name}:{props.product.discription}
+              <h3>{props.product.name}</h3>
+              {props.product.discription}
           </li>
         </a>
     );
 }
 class ProductTable extends React.Component {
-    constructor(props) {
-      super(props);
-    }
     render() {
       return (
-        <div className="Contents">
-          <ul>
+        <div className="ProductTable">
+          <ul key={this.props.prodcuts}>
           {this.props.products.map((product)=>
-            <ProductRow product={product}/>
+            <ProductRow product={product} key={product.name}/>
           )}
           </ul>
         </div>
@@ -62,15 +57,19 @@ class FilterableTable extends React.Component {
       }
       render() {
         let filteredProducts=[]
-        this.props.products.map((product)=>{
+        //英字の大文字小文字は問わないようにする
+        let words=this.state.formvalue.toLowerCase().split(' ') 
+        this.props.products.forEach((product)=>{
           let str=product.name+product.discription
-          //英字の大文字小文字は問わないようにする
-          if(str.toLowerCase().indexOf(this.state.formvalue.toLowerCase())>-1){
-            filteredProducts.push(product)
-          }
+          str=str.toLowerCase()
+          let cnt=0;
+          words.forEach((word)=>{
+            if(str.indexOf(word)>-1)cnt+=1
+          })  
+          if(cnt===words.length)filteredProducts.push(product) 
         })
         return (
-          <div className="Contents">
+          <div>
             <SearchBar value={this.state.formvalue} onChange={this.handleFormChange} onSubmit={this.handleSubmit}/>
             <ProductTable products={filteredProducts}/>
           </div>

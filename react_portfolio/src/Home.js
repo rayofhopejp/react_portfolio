@@ -1,8 +1,10 @@
 import React from 'react';
-
+import Icon from "./pictures/NaomiIcon.jpg";
 function FloatingIcon(){
     return(
-        <div>here is icon</div>
+        <div>
+            <img src={Icon} alt="icon" className="Icon"/>
+        </div>
     );
 }
 function MyName(){
@@ -15,21 +17,24 @@ function MyName(){
 function MyBelonging(){
     return(
         <div className="DiscriptionText">
-            <div>discription</div>
+            <div>
+                I am a student in the University of Tokyo.<br/>
+                Works: The websites I made.<br/>
+                Experiences: My personal histories (including certifications and careers)<br/>
+                Contacts: My accounts.
+            </div>
         </div>
     );
 }
 class HomeContents extends React.Component {
-    constructor(props) {
-      super(props);
-    }
     render() {
       return (
-        <div className="Contents">
-          <h1>Home</h1>
+        <div>
           <FloatingIcon/>
+          <div className="Texts">
           <MyName/>
           <MyBelonging/>
+          </div>
         </div>
       );
     }

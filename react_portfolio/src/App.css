@@ -1,21 +1,79 @@
 .App{
-   border: solid;
-   border-color: orangered;
-   height: 80vh;
+   padding:10px;
+   height: 100%;
    width: 100%;
 }
 .Toolbar{
-  border: solid;
-  border-color: purple;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-family: Impact,Charcoal;
 }
-.Contents{
-  border: solid;
-  border-color: blue;
+.Toolbar ul{
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+  text-align: center;
+}
+.Toolbar ul li{
+  display: table-cell;
+  min-width: 50px;
+  border-right: 1px solid #ccc;
+}
+.Toolbar ul li:first-child{
+  border-left: 1px solid #ccc;
+}
+.Toolbar ul li a{
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #aaa;
+}
+.Toolbar ul li:hover{
+  background-color:#F8E750;
+  border-bottom: 5px solid #00B0F0;
+}
+.Contents h1{
+  font-family: Impact,Charcoal;
 }
 .TitleText{
   font-size: larger;
   font-family: Impact,Charcoal;
 }
 .ProductRow{
-  border:solid;
+  padding:10px;
+  margin:10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px 0 rgba(0,0,0,0.2);
+  font-family: sans-serif;
+}
+.ProductTable ul{
+  list-style:none;
+}
+.ProductTable ul a{
+  color:black;
+  text-decoration: none;
+}
+.Icon{
+  float:left;
+  margin:10px;
+  height:200px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px 0 rgba(0,0,0,0.4);
+  animation: Icon_float 3s linear infinite;
+  transform-origin: 50% 50%;
+  margin: 1rem 0 !important;
+}
+@keyframes Icon_float{
+  0% { transform: translateY(0) }
+  33.33333% { transform: translateY(-10px) }
+  66.66667% { transform: translateY(0) }
+  100% { transform: translateY(0) }
+}
+.Texts{
+  padding:10px;
+  float:left;
+  width:50vh;
+  height:50vh;
 }

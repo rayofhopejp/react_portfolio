@@ -1,5 +1,4 @@
 import React from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import HomeContents from './Home.js';
 import WorksContents from './Works.js';
@@ -8,17 +7,17 @@ import ContactsContents from './Contacts.js';
 
 
 class Toolbar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="Toolbar">
         <ul>
-          <MenuButton name="Home" onClick={this.props.handlePageChange}/>
-          <MenuButton name="Works" onClick={this.props.handlePageChange}/>
-          <MenuButton name="Experiences" onClick={this.props.handlePageChange}/>
-          <MenuButton name="Contacts" onClick={this.props.handlePageChange}/>
+          {this.props.pages.map((p)=>
+            <MenuButton 
+              key={p}
+              name={p} 
+              onClick={this.props.handlePageChange}
+            />
+          )}
         </ul>
       </div>
     );
@@ -32,9 +31,6 @@ function MenuButton(props){
   );
 }
 class Contents extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="Contents">
@@ -52,20 +48,20 @@ class App extends React.Component {
     this.state={
       page:<HomeContents/>
     };
-  }
-  handlePageChange(name){
-    const pages={
+    this.pages={
       "Home":<HomeContents/>,
       "Works":<WorksContents/>,
       "Experiences":<ExperiencesContents/>,
       "Contacts":<ContactsContents/>
     };
-    this.setState({page:pages[name]});
+  }
+  handlePageChange(name){
+    this.setState({page:this.pages[name]});
   }
   render(){
     return (
       <div className="App">
-        <Toolbar handlePageChange={this.handlePageChange}/>
+        <Toolbar pages={Object.keys(this.pages)} handlePageChange={this.handlePageChange}/>
         <Contents page={this.state.page}/>
       </div>
     );
