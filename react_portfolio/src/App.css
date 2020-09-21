@@ -77,3 +77,14 @@
   width:50vh;
   height:50vh;
 }
+.ProductIcon{
+  float:left;
+  margin:10px;
+  height:100px;
+}
+
+.clearfix:after{
+	content: "";
+	clear: both;
+	display: block;
+}

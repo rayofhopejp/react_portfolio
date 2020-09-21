@@ -17,9 +17,11 @@ class SearchBar extends React.Component {
     }
 }
 function ProductRow(props){
+    let image=props.product.icon ? <img src={props.product.icon} alt="icon" className="ProductIcon"/> :"";
     return(
         <a href={props.product.link} rel="noopener noreferrer" target="_blank">
-          <li className="ProductRow">
+          <li className="ProductRow clearfix">
+              {image}
               <h3>{props.product.name}</h3>
               {props.product.discription}
           </li>

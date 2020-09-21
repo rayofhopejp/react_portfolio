@@ -19,6 +19,7 @@ class ExperiencesContents extends React.Component {
             name:"AtCoder",
             discription:"プログラミングコンテストに参加し，アルゴリズムの知識を深めています．Highestは1502(水色上位)です(2020/05/10時点)．主にC++で解いています．",
             link:"https://atcoder.jp/users/NaomiatLibrary",
+            icon:"https://img.atcoder.jp/assets/top/img/logo_bk.svg"
           },
           {
             name:"東京大学Summer Founders Program 2019",

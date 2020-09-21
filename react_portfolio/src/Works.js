@@ -1,5 +1,6 @@
 import React from 'react';
 import FilterableTable from './Helpers.js';
+import NaomiIcon from "./pictures/NaomiIcon.jpg";
 
 class WorksContents extends React.Component {
     constructor(props) {
@@ -19,12 +20,13 @@ class WorksContents extends React.Component {
               {
                 name:"CovidGraph(2020)",
                 discription:"新型コロナの感染者数をプロットするアプリです．flaskの練習に作りました．",
-                link:"https://naomiatlibrary.com/CovidGraph/"
+                link:"https://naomiatlibrary.com/CovidGraph/",
               },
               {
                 name:"Portfolio(2020)",
                 discription:"このサイトです．Reactの練習に作りました．",
-                link:"https://naomiatlibrary.com"
+                link:"https://naomiatlibrary.com",
+                icon:NaomiIcon
               },
               {
                 name:"文豪チャット(2017)",
