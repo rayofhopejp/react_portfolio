@@ -71,6 +71,9 @@
   box-shadow: 0 10px 25px 0 rgba(0,0,0,0.2);
   font-family: sans-serif;
 }
+.ProductRow:hover{
+  background-color: lightgoldenrodyellow;
+}
 .ProductTable ul{
   list-style:none;
 }
