@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
 import './App.css';
 import HomeContents from './Home.js';
 import WorksContents from './Works.js';
@@ -12,17 +13,18 @@ class Toolbar extends React.Component {
       <div className="Toolbar">
         <ul>
           {this.props.pages.map((p)=>
-            <MenuButton 
-              key={p}
-              name={p} 
-              onClick={this.props.handlePageChange}
-            />
+            <li>
+              <NavLink to={{pathname: "/"+p}} exact activeStyle={{color: "gray"}}>
+                {p}
+              </NavLink>
+            </li>
           )}
         </ul>
       </div>
     );
   }
 }
+/*
 function MenuButton(props){
   return(
     <li className="MenuButton" onClick={()=>props.onClick(props.name)}>
@@ -30,6 +32,7 @@ function MenuButton(props){
     </li>
   );
 }
+
 class Contents extends React.Component {
   render() {
     return (
@@ -39,7 +42,7 @@ class Contents extends React.Component {
     );
   }
 }
-
+*/
 
 class App extends React.Component {
   constructor(props){
@@ -49,10 +52,10 @@ class App extends React.Component {
       page:<HomeContents/>
     };
     this.pages={
-      "Home":<HomeContents/>,
-      "Works":<WorksContents/>,
-      "Experiences":<ExperiencesContents/>,
-      "Contacts":<ContactsContents/>
+      "Home":HomeContents,
+      "Works":WorksContents,
+      "Experiences":ExperiencesContents,
+      "Contacts":ContactsContents
     };
   }
   handlePageChange(name){
@@ -61,8 +64,15 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <BrowserRouter>
         <Toolbar pages={Object.keys(this.pages)} handlePageChange={this.handlePageChange}/>
-        <Contents page={this.state.page}/>
+          <Switch>
+            {Object.entries(this.pages).map( ([key, value]) =>
+              <Route exact path={"/"+key} component={value}/> 
+            )}
+            <Route exact component={HomeContents} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }

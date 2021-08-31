@@ -20,15 +20,12 @@
   min-width: 50px;
   border-right: 1px solid #ccc;
 }
-.Toolbar ul li:first-child{
-  border-left: 1px solid #ccc;
-}
 .Toolbar ul li a{
   display: block;
   width: 100%;
   padding: 10px 0;
   text-decoration: none;
-  color: #aaa;
+  color: black;
 }
 .Toolbar ul li:hover{
   background-color:#F8E750;
